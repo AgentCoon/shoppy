@@ -33,7 +33,7 @@ class ProductReview(models.Model):
     product = models.ForeignKey(Product, related_name="reviews")
     content = models.CharField(max_length=500)
     rating = models.IntegerField()
-    created_at = models.DateTimeField()
+    created_at = models.DateTimeField(default=datetime.now)
 
     def __unicode__(self):
         return u'%s - %s' % (self.created_by.username, self.product.name)
