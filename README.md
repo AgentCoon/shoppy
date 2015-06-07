@@ -1,0 +1,4 @@
+Shopapp
+=======
+
+Python Django playground
